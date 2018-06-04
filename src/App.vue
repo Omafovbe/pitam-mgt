@@ -35,7 +35,32 @@
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  data () {
+    return {
+      activeUser: null
+    }
+  },
+  async created () {
+    await this.refreshActiveUser()
+  },
+  watch: {
+    // everytime a route is changed refresh the activeUser
+    '$route': 'refreshActiveUser'
+  },
+
+  methods: {
+    async logout () {
+      await this.$auth.logout()
+      await this.refreshActiveUser()
+      this.$router.push('/')
+    },
+
+    async refreshActiveUser () {
+      this.activeUser = await this.$auth.getUser()
+    }
+    
+  }
 }
 </script>
 

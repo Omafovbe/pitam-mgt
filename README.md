@@ -1,4 +1,4 @@
-# pitam-mgt
+# Pitam-mgt [![Build Status](https://travis-ci.org/Omafovbe/pitam-mgt.svg?branch=master)](https://travis-ci.org/Omafovbe/pitam-mgt)
 
 > Pitam Table Water Management App
 

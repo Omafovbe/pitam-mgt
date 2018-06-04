@@ -7,7 +7,13 @@
         </div>
         <div class="md-layout-item md-alignment-right">
           <span style="text-align: right">
+
+              <md-button @click.prevent="logout" v-if="activeUser" class="md-icon-button md-accent">
+                  <md-icon>exit_to_app</md-icon>
+              </md-button>
+
               <md-menu>
+                
                 <md-icon md-menu-trigger>more_vert</md-icon>
                 <md-menu-content style="background-color: #fff">
                   <md-menu-item><router-link :to="{name: 'Drivers'}">Drivers</router-link></md-menu-item>

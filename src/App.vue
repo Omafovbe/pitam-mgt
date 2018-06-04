@@ -58,8 +58,7 @@ export default {
 
     async refreshActiveUser () {
       this.activeUser = await this.$auth.getUser()
-    }
-    
+    }  
   }
 }
 </script>
